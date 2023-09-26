@@ -24,7 +24,7 @@ OpenAPI spec contents are automatically generated, and therefore **we do not all
 🐛 For bug fixes or improvements, you can [open an issue](https://github.com/discord/discord-api-spec/issues).
 
 ## Spec conventions
-- This is a preview and it may be not correct. If you find discrepancies between the spec and our [docs](https://discord.com/developers/docs), other than the ones mentioned below, let us know, and follow the docs, not the spec.
+- This is a preview and it may not be correct. If you find discrepancies between the spec and our [docs](https://discord.com/developers/docs), other than the ones mentioned below, let us know, and follow the docs, not the spec.
 - Even though we define `anyOf` and `oneOf` unions, they all mean that only one type from the list can be used as a data format. E.g. `anyOf: {'Cat', 'Dog'}`, still means that you can either pass `Cat` or `Dog`, not `Cat+Dog`. This is signified by the custom extension `x-discord-union: oneOf`. We use `anyOf` when we technically can’t use `oneOf`. One of the reasons to do that is e.g. when all the fields are optional and the passed in data could be validated with more than one format.
 - We avoid over-specifying response fields and merely define field types, like `int32`, and we avoid defining specific minimums, maximums, etc.
 - Some fields typed as strings in our docs may be typed as ints in the spec. Our API accepts strings for int fields if they are parseable as ints. We think it’ll be more precise to spec these int-parseable strings as ints.
